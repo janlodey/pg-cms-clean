@@ -1,5 +1,3 @@
-import { BoltIcon, Battery100Icon, SparklesIcon } from '@heroicons/react/24/outline'
-
 export function HeroSection() {
   return (
     <section className="bg-[#002850] text-white relative py-32 lg:py-40 overflow-hidden">
@@ -25,8 +23,7 @@ export function HeroSection() {
             Methanol Fuel Cells
           </div>
           <h1 className="text-6xl lg:text-8xl font-black leading-none mb-8 animate-fade-in-up animation-delay-200">
-            The Future of
-            <span className="block text-[#058CFA] mt-2">Clean Power</span>
+            The Future of <span className="text-[#058CFA]">Clean Power</span>
           </h1>
           <p className="text-xl lg:text-2xl text-blue-100 max-w-3xl leading-relaxed animate-fade-in-up animation-delay-400">
             Silent, reliable energy that replaces diesel generators. 
@@ -43,11 +40,6 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-      
-      {/* Floating elements */}
-      <BoltIcon className="absolute top-1/4 right-12 w-12 h-12 opacity-60 animate-float" />
-      <Battery100Icon className="absolute bottom-1/4 right-1/4 w-8 h-8 opacity-40 animate-float animation-delay-1000" />
-      <SparklesIcon className="absolute top-1/3 left-12 w-10 h-10 opacity-50 animate-float animation-delay-500" />
     </section>
   )
 }
