@@ -16,6 +16,7 @@
     "@payloadcms/next": "^3.32.0",
     "@payloadcms/richtext-lexical": "^3.32.0",
     "@payloadcms/ui": "^3.32.0",
+    "@tailwindcss/postcss": "^4.1.18",
     "cross-env": "^7.0.3",
     "graphql": "^16.8.1",
     "next": "^15.1.0",
@@ -28,6 +29,9 @@
     "@types/node": "^22.5.4",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
     "typescript": "^5.7.0"
   },
   "engines": {
