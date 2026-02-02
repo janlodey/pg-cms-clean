@@ -1,6 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Source paths for Tailwind to scan */
+@source "../../components/**/*.tsx";
+@source "./**/*.tsx";
+
+/* Custom theme */
+@theme {
+  --color-ocean: #002850;
+  --color-sky: #058CFA;
+  --color-sky-hover: #0070d6;
+  --color-mountain: #00B000;
+}
 
 /* Animations for fuel cells page */
 @keyframes fadeInUp {
