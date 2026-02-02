@@ -1,15 +1,30 @@
+import { 
+  CloudIcon, 
+  SparklesIcon, 
+  SpeakerWaveIcon, 
+  SpeakerXMarkIcon,
+  WrenchIcon,
+  CheckCircleIcon,
+  CurrencyDollarIcon,
+  BanknotesIcon,
+  ExclamationTriangleIcon,
+  ShieldCheckIcon,
+  DocumentTextIcon,
+  CheckIcon
+} from '@heroicons/react/24/outline'
+
 export function VsDieselSection() {
   const comparisons = [
     {
       category: "Emissions",
       diesel: {
         value: "High CO₂, NOx, particulates, SOx",
-        icon: "💨",
+        icon: CloudIcon,
         negative: true
       },
       fuelCell: {
         value: "51-100% less CO₂, zero other pollutants",
-        icon: "🌱",
+        icon: SparklesIcon,
         negative: false
       }
     },
@@ -17,12 +32,12 @@ export function VsDieselSection() {
       category: "Noise Level",
       diesel: {
         value: "80-100 dB (Very loud)",
-        icon: "📢",
+        icon: SpeakerWaveIcon,
         negative: true
       },
       fuelCell: {
         value: "<65 dB (Near-silent)",
-        icon: "🔇",
+        icon: SpeakerXMarkIcon,
         negative: false
       }
     },
@@ -30,12 +45,12 @@ export function VsDieselSection() {
       category: "Maintenance",
       diesel: {
         value: "Frequent oil, filters, overhauls",
-        icon: "🔧",
+        icon: WrenchIcon,
         negative: true
       },
       fuelCell: {
         value: "80-91% fewer service visits",
-        icon: "✅",
+        icon: CheckCircleIcon,
         negative: false
       }
     },
@@ -43,12 +58,12 @@ export function VsDieselSection() {
       category: "Operating Cost",
       diesel: {
         value: "~$0.22/kWh",
-        icon: "💰",
+        icon: CurrencyDollarIcon,
         negative: true
       },
       fuelCell: {
         value: "~$0.18/kWh (19% lower)",
-        icon: "💵",
+        icon: BanknotesIcon,
         negative: false
       }
     },
@@ -56,12 +71,12 @@ export function VsDieselSection() {
       category: "Fuel Theft Risk",
       diesel: {
         value: "High (black market value)",
-        icon: "🚨",
+        icon: ExclamationTriangleIcon,
         negative: true
       },
       fuelCell: {
         value: "Low (no demand for methanol)",
-        icon: "🛡️",
+        icon: ShieldCheckIcon,
         negative: false
       }
     },
@@ -69,12 +84,12 @@ export function VsDieselSection() {
       category: "Environmental Permits",
       diesel: {
         value: "Often requires permits",
-        icon: "📋",
+        icon: DocumentTextIcon,
         negative: true
       },
       fuelCell: {
         value: "Generally compliant by default",
-        icon: "✓",
+        icon: CheckIcon,
         negative: false
       }
     }
@@ -115,7 +130,7 @@ export function VsDieselSection() {
                 <div className="grid grid-cols-3 gap-4 items-center">
                   {/* Diesel */}
                   <div className="text-center p-4 bg-orange-500/10 rounded-xl border border-orange-500/20">
-                    <div className="text-2xl mb-2">{comparison.diesel.icon}</div>
+                    <comparison.diesel.icon className="w-8 h-8 text-orange-400 mx-auto mb-2" />
                     <div className="text-orange-200 text-sm font-medium">{comparison.diesel.value}</div>
                   </div>
                   
@@ -126,7 +141,7 @@ export function VsDieselSection() {
                   
                   {/* Fuel Cell */}
                   <div className="text-center p-4 bg-[#058CFA]/10 rounded-xl border border-[#058CFA]/20">
-                    <div className="text-2xl mb-2">{comparison.fuelCell.icon}</div>
+                    <comparison.fuelCell.icon className="w-8 h-8 text-[#058CFA] mx-auto mb-2" />
                     <div className="text-blue-200 text-sm font-medium">{comparison.fuelCell.value}</div>
                   </div>
                 </div>

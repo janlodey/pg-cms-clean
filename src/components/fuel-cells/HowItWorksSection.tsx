@@ -1,28 +1,38 @@
+import { 
+  CubeIcon, 
+  BeakerIcon, 
+  BoltIcon, 
+  Battery100Icon,
+  ArrowRightIcon,
+  Square3Stack3DIcon,
+  TruckIcon
+} from '@heroicons/react/24/outline'
+
 export function HowItWorksSection() {
   const steps = [
     {
       step: "01",
       title: "Fuel Storage",
       description: "Methanol (mixed with water) stored in standard tank—no high-pressure systems needed",
-      icon: "🏭"
+      icon: CubeIcon
     },
     {
       step: "02", 
       title: "Reforming",
       description: "Inside the fuel cell, hydrogen is extracted from the methanol using internal reforming",
-      icon: "⚗️"
+      icon: BeakerIcon
     },
     {
       step: "03",
       title: "Electrochemical Conversion", 
       description: "Hydrogen reacts with oxygen across a membrane, producing clean electricity",
-      icon: "⚡"
+      icon: BoltIcon
     },
     {
       step: "04",
       title: "Clean Output",
       description: "Electrical power flows out; water vapor and minimal CO₂ are the only byproducts",
-      icon: "🔌"
+      icon: Battery100Icon
     }
   ]
 
@@ -47,22 +57,13 @@ export function HowItWorksSection() {
                 {/* Connection arrow */}
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 z-10">
-                    <svg width="40" height="20" viewBox="0 0 40 20" className="text-[#058CFA]">
-                      <path 
-                        d="M30 10 L40 10 M35 5 L40 10 L35 15" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <ArrowRightIcon className="w-8 h-8 text-[#058CFA]" />
                   </div>
                 )}
 
                 <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                   <div className="text-center">
-                    <div className="text-5xl mb-6">{step.icon}</div>
+                    <step.icon className="w-12 h-12 text-[#058CFA] mx-auto mb-6" />
                     <div className="text-[#058CFA] font-bold text-sm mb-2">STEP {step.step}</div>
                     <h3 className="text-xl font-bold text-[#002850] mb-4">{step.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
@@ -82,22 +83,22 @@ export function HowItWorksSection() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-2xl mb-2">💧</div>
+              <BeakerIcon className="w-8 h-8 text-[#058CFA] mx-auto mb-2" />
               <div className="font-bold text-[#002850]">Easy to Handle</div>
               <div className="text-sm text-gray-600">Liquid at normal temperatures</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl mb-2">📦</div>
+              <Square3Stack3DIcon className="w-8 h-8 text-[#058CFA] mx-auto mb-2" />
               <div className="font-bold text-[#002850]">Easy to Store</div>
               <div className="text-sm text-gray-600">Standard tanks, no pressure</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl mb-2">🚛</div>
+              <TruckIcon className="w-8 h-8 text-[#058CFA] mx-auto mb-2" />
               <div className="font-bold text-[#002850]">Easy to Transport</div>
               <div className="text-sm text-gray-600">Existing fuel networks</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl mb-2">⚡</div>
+              <BoltIcon className="w-8 h-8 text-[#058CFA] mx-auto mb-2" />
               <div className="font-bold text-[#002850]">Energy Dense</div>
               <div className="text-sm text-gray-600">More energy per litre</div>
             </div>

@@ -1,3 +1,5 @@
+import { ArrowRightIcon } from '@heroicons/react/24/outline'
+
 export function MethanolTypesSection() {
   const methanolTypes = [
     {
@@ -54,16 +56,7 @@ export function MethanolTypesSection() {
                 {index < methanolTypes.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 -right-2 transform -translate-y-1/2 z-10">
                     <div className="bg-[#058CFA] rounded-full p-2">
-                      <svg width="24" height="24" viewBox="0 0 24 24" className="text-white">
-                        <path 
-                          d="M13 7L18 12L13 17M6 12H18" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
+                      <ArrowRightIcon className="w-6 h-6 text-white" />
                     </div>
                   </div>
                 )}
@@ -127,17 +120,23 @@ export function MethanolTypesSection() {
             <h3 className="text-3xl font-bold mb-6">Smart Transition Strategy</h3>
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-4xl mb-4">1️⃣</div>
+                <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-black">1</span>
+                </div>
                 <div className="font-bold mb-2">Start Today</div>
                 <div className="text-blue-100 text-sm">Deploy with grey methanol for immediate 51% CO₂ reduction</div>
               </div>
               <div>
-                <div className="text-4xl mb-4">2️⃣</div>
+                <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-black">2</span>
+                </div>
                 <div className="font-bold mb-2">Scale with Supply</div>
                 <div className="text-blue-100 text-sm">Transition to blue and green as production increases</div>
               </div>
               <div>
-                <div className="text-4xl mb-4">3️⃣</div>
+                <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-black">3</span>
+                </div>
                 <div className="font-bold mb-2">Achieve Net-Zero</div>
                 <div className="text-blue-100 text-sm">Reach 100% CO₂ reduction with no equipment changes</div>
               </div>

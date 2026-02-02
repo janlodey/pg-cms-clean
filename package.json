@@ -12,6 +12,7 @@
     "generate:types": "payload generate:types"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@payloadcms/db-postgres": "^3.32.0",
     "@payloadcms/next": "^3.32.0",
     "@payloadcms/richtext-lexical": "^3.32.0",

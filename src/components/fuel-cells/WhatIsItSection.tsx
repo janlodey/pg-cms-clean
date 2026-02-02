@@ -1,17 +1,19 @@
+import { SpeakerXMarkIcon, SparklesIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
+
 export function WhatIsItSection() {
   const valueProps = [
     {
-      icon: "🔇",
+      icon: SpeakerXMarkIcon,
       title: "Silent Operation",
       description: "Near-silent power generation (<65 dB vs 80-100 dB for diesel). Perfect for urban environments, events, and noise-sensitive locations."
     },
     {
-      icon: "🌱",
+      icon: SparklesIcon,
       title: "Zero Harmful Emissions",
       description: "Zero NOx, SOx, and particulate matter. Only water vapor and minimal CO₂ output. Clean air for workers and communities."
     },
     {
-      icon: "🛡️",
+      icon: ShieldCheckIcon,
       title: "Proven Reliability",
       description: "Fewer moving parts than diesel generators. 80-91% fewer service visits. Proven technology with decades of development."
     }
@@ -37,9 +39,7 @@ export function WhatIsItSection() {
               key={index}
               className="group p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-xl transition-all duration-500 hover:scale-105"
             >
-              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                {prop.icon}
-              </div>
+              <prop.icon className="w-12 h-12 text-[#058CFA] mb-6 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-2xl font-bold text-[#002850] mb-4">
                 {prop.title}
               </h3>

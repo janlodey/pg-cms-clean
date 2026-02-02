@@ -1,28 +1,36 @@
+import { 
+  CurrencyDollarIcon, 
+  WrenchScrewdriverIcon, 
+  ShieldCheckIcon, 
+  SparklesIcon,
+  ArrowTrendingDownIcon
+} from '@heroicons/react/24/outline'
+
 export function EconomicsSection() {
   const keyStats = [
     {
       value: "19%",
       label: "Fuel Savings",
       description: "Lower cost per kWh vs diesel",
-      icon: "⛽"
+      icon: CurrencyDollarIcon
     },
     {
       value: "91%",
       label: "Fewer Service Visits", 
       description: "Over 50,000 operating hours",
-      icon: "🔧"
+      icon: WrenchScrewdriverIcon
     },
     {
       value: "0%",
       label: "Fuel Theft Risk",
       description: "No black market for methanol",
-      icon: "🛡️"
+      icon: ShieldCheckIcon
     },
     {
       value: "100%",
       label: "Future-Proof",
       description: "Path to net-zero with same equipment",
-      icon: "🌱"
+      icon: SparklesIcon
     }
   ]
 
@@ -77,7 +85,7 @@ export function EconomicsSection() {
               key={index}
               className="bg-white/10 backdrop-blur rounded-2xl p-8 text-center hover:bg-white/15 transition-all duration-300 hover:scale-105"
             >
-              <div className="text-4xl mb-4">{stat.icon}</div>
+              <stat.icon className="w-10 h-10 text-[#058CFA] mx-auto mb-4" />
               <div className="text-4xl lg:text-5xl font-black text-[#058CFA] mb-2">
                 {stat.value}
               </div>
@@ -114,12 +122,13 @@ export function EconomicsSection() {
                   </div>
                   
                   <div className="text-center">
-                    <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-bold ${
+                    <div className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-bold ${
                       item.trend === 'down' 
                         ? 'bg-green-500/20 text-green-300' 
                         : 'bg-red-500/20 text-red-300'
                     }`}>
-                      {item.trend === 'down' ? '↓' : '↑'} {item.saving}
+                      <ArrowTrendingDownIcon className="w-4 h-4" />
+                      {item.saving}
                     </div>
                   </div>
                 </div>

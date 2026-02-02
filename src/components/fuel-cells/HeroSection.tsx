@@ -1,3 +1,5 @@
+import { BoltIcon, Battery100Icon, SparklesIcon } from '@heroicons/react/24/outline'
+
 export function HeroSection() {
   return (
     <section className="bg-[#002850] text-white relative py-32 lg:py-40 overflow-hidden">
@@ -43,9 +45,9 @@ export function HeroSection() {
       </div>
       
       {/* Floating elements */}
-      <div className="absolute top-1/4 right-12 text-4xl opacity-60 animate-float">⚡</div>
-      <div className="absolute bottom-1/4 right-1/4 text-2xl opacity-40 animate-float animation-delay-1000">🔋</div>
-      <div className="absolute top-1/3 left-12 text-3xl opacity-50 animate-float animation-delay-500">🌱</div>
+      <BoltIcon className="absolute top-1/4 right-12 w-12 h-12 opacity-60 animate-float" />
+      <Battery100Icon className="absolute bottom-1/4 right-1/4 w-8 h-8 opacity-40 animate-float animation-delay-1000" />
+      <SparklesIcon className="absolute top-1/3 left-12 w-10 h-10 opacity-50 animate-float animation-delay-500" />
     </section>
   )
 }

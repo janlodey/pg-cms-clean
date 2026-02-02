@@ -1,39 +1,49 @@
+import { 
+  SignalIcon, 
+  BuildingOffice2Icon, 
+  SparklesIcon as EventIcon,
+  WrenchScrewdriverIcon,
+  MapPinIcon,
+  GlobeAltIcon,
+  CheckIcon
+} from '@heroicons/react/24/outline'
+
 export function ApplicationsSection() {
   const applications = [
     {
       title: "Telecommunications",
       description: "Silent power for cell towers and remote infrastructure. No noise complaints, reduced fuel theft, minimal maintenance.",
-      icon: "📡",
+      icon: SignalIcon,
       features: ["Silent operation", "No fuel theft risk", "Reduced site visits"]
     },
     {
       title: "Data Centers", 
       description: "Clean backup power without emissions permits. Fast response to outages, quiet operation for urban locations.",
-      icon: "🏢",
+      icon: BuildingOffice2Icon,
       features: ["Fast response", "Urban compliant", "Lower carbon footprint"]
     },
     {
       title: "Events & Hospitality",
       description: "Power for hotels, outdoor events, and temporary installations without noise, fumes, or complex permitting.",
-      icon: "🎪",
+      icon: EventIcon,
       features: ["No noise/fumes", "Simple permitting", "Guest-friendly"]
     },
     {
       title: "Mining & Construction",
       description: "Reliable power for remote sites. Easier transport than diesel, lower security costs, cleaner air for workers.",
-      icon: "⛏️",
+      icon: WrenchScrewdriverIcon,
       features: ["Easy transport", "Lower security costs", "Worker health"]
     },
     {
       title: "Remote Infrastructure",
       description: "Traffic systems, rail signaling, pipeline monitoring—any infrastructure far from the grid.",
-      icon: "🚦",
+      icon: MapPinIcon,
       features: ["Long-duration power", "Weather independent", "Minimal maintenance"]
     },
     {
       title: "Marine & Islands",
       description: "Clean power for harbors, islands, and maritime operations where diesel logistics are expensive.",
-      icon: "🚢",
+      icon: GlobeAltIcon,
       features: ["Reduced logistics", "Port compliant", "Marine suitable"]
     }
   ]
@@ -58,9 +68,7 @@ export function ApplicationsSection() {
               key={index}
               className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 hover:-translate-y-1"
             >
-              <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                {app.icon}
-              </div>
+              <app.icon className="w-16 h-16 text-[#058CFA] mb-6 group-hover:scale-110 transition-transform duration-300" />
               
               <h3 className="text-2xl font-bold text-[#002850] mb-4">
                 {app.title}
@@ -73,9 +81,7 @@ export function ApplicationsSection() {
               <div className="space-y-2">
                 {app.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center text-sm text-[#058CFA]">
-                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
+                    <CheckIcon className="w-4 h-4 mr-2" />
                     {feature}
                   </div>
                 ))}
